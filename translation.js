@@ -18,6 +18,9 @@ if (lang != "ja") {
 	} catch (e) {
 		console.log("not found: translation.json");
 	}
-	reference_en.style.display = "block";
-	reference_ja.style.display = "none";
+	//
+	const jac = document.body.querySelectorAll(".ja_content");
+	jac.forEach(ja => ja.style.display = "none");
+	const enc = document.body.querySelectorAll(".en_content");
+	enc.forEach(ja => ja.style.display = "block");
 }
